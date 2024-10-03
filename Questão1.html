@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="questao1.css">
+    <title>Questão_1</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Insira seu Nome</h1>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <button onclick="mostrarMensagem()">Enviar</button>
+        <div id="mensagem"></div>
+    </div>
+
+    <script>
+        function mostrarMensagem() {
+            const nomeInput = document.getElementById('nome').value;
+            const mensagemDiv = document.getElementById('mensagem');
+
+            if (nomeInput.trim() === "") {
+                mensagemDiv.textContent = "Por favor, insira seu nome.";
+            } else {
+                mensagemDiv.textContent = `Olá, ${nomeInput}!`;
+            }
+        }
+    </script>
+</body>
+</html>
